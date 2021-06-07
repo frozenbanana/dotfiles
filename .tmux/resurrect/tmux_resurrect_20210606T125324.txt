@@ -1,0 +1,5 @@
+pane	summer-code-project	0	:zsh	1	:*	0	:/Users/henry/Library/Mobile\ Documents/com~apple~CloudDocs/Code/masvinge	1	zsh	:
+pane	summer-code-project	0	:zsh	1	:*	1	:/Users/henry/Library/Mobile\ Documents/com~apple~CloudDocs/Code/masvinge	0	zsh	:
+pane	summer-code-project	0	:zsh	1	:*	2	:/Users/henry/Library/Mobile\ Documents/com~apple~CloudDocs/Code/masvinge	0	zsh	:
+window	summer-code-project	0	1	:*	8796,178x55,0,0{89x55,0,0,0,88x55,90,0[88x27,90,0,1,88x27,90,28,2]}
+state	summer-code-project	
