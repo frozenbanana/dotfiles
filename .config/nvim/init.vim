@@ -7,12 +7,23 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree' " See all undoes in a tree :UndoTreeToggle
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " completion engine a la vscode
 Plug 'christoomey/vim-tmux-navigator' " Seamless vimlike navigation in vim and tmux 
+Plug 'jremmen/vim-ripgrep' " Fast content search inside project :rg
+Plug 'mattn/emmet-vim' " Emmet for vim
+Plug 'SirVer/ultisnips' " Snippets
+Plug 'mlaursen/vim-react-snippets' " Snippets for react
+Plug 'itchyny/lightline.vim'  " statusbar
+Plug 'itchyny/vim-gitbranch'  " Add gitbranch to statusbar
+Plug 'karoliskoncevicius/vim-sendtowindow' " Send text to other window (REPL)
+
 
 " Initialize plugin system
 call plug#end()
 source ~/.config/nvim/plug-config/coc.vim
 source ~/.config/nvim/plug-config/fzf.vim
 source ~/.config/nvim/plug-config/vim-tmux-navigator.vim
+source ~/.config/nvim/plug-config/ripgrep.vim
+source ~/.config/nvim/plug-config/emmet.vim
+source ~/.config/nvim/plug-config/lightline.vim
 source ~/.config/nvim/remapped-config/keybindings.vim
 
 
@@ -28,9 +39,11 @@ set noswapfile " No .swap please
 set nobackup   " 
 set undodir=~/.vim/undodir
 set undofile
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set incsearch " give me results while typing
+set splitbelow " split land below when horizontal split
+set splitright " split land right when vertial split
 
 " always uses spaces instead of tab characters
 set expandtab
@@ -41,3 +54,5 @@ if (has("termguicolors"))
  set termguicolors
 endif
 colorscheme dracula
+
+

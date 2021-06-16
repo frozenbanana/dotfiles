@@ -13,5 +13,8 @@
     "html"
   ],
   "typescript.validate.enable": true,
-  "diagnostic.checkCurrentLine": true
+  "diagnostic.checkCurrentLine": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }
