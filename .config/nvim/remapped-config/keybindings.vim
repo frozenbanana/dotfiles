@@ -1,10 +1,6 @@
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-" Make C-space also me the leader for window commands (like my tmux)
-
-" nnoremap <C-J> :wincmd j<CR>
-" nnoremap <C-K> :wincmd k<CR>
-" nnoremap <C-L> :wincmd l<CR>
-" nnoremap <C-H> :wincmd h<CR>
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> 
+" CDC to set current directory to opened file
+command! CDC cd %:p:h
 
 " Commenting
 let s:comment_map = { 
@@ -13,7 +9,7 @@ let s:comment_map = {
     \   "go": '\/\/',
     \   "java": '\/\/',
     \   "javascript": '\/\/',
-    \   "lua": '--',
+      \   "lua": '--',
     \   "scala": '\/\/',
     \   "php": '\/\/',
     \   "python": '#',
@@ -57,10 +53,26 @@ endfunction
 
 " using iterm shortcut to send :call ToggleComment()\n by typing ctrl+/
 
-" Better replace
-" I have a keybinding in my init.vim that will allow me to search for a pattern with the usual / character, page through them as normal with n and N , but when I press <C-R> it will populate the replace command for me so that all I need to do is type out the new text.
-nnoremap <c-r> :%s/<C-R>///g<Left><Left>
+" Make Y behave like D
+nnoremap Y y$
 
+" Keeping it centered when jumping to next/previous
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzj`z
+
+" Move text in all modes
+nnoremap <A-k> :m .-2<CR>==
+nnoremap <A-j> :m .+1<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Buffer splits
 cabbrev vsb vert sb
+
+
+" using :e %% will expand to :e /current/directory/to/your/[file]
+cabbr <expr> %% expand('%:p:h')
+

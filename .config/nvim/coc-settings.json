@@ -1,5 +1,7 @@
 {
   "suggest.noselect": false,
+  "eslint.autoFixOnSave": true,
+  "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "python",
     "javascript",
@@ -12,9 +14,11 @@
     "css",
     "html"
   ],
+  "coc.preferences.formatOnType": true,
   "typescript.validate.enable": true,
   "diagnostic.checkCurrentLine": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  }
+  },
+  "javascript.validate.enable": false
 }
